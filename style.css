@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+:root{
+    --FF: 'Inconsolata', monospace;
+    --BGCOLOR-FADE: #32a137;
+    --BGCOLOR: #e6bd07;
+    --BGIMAGE: linear-gradient(0deg, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --FCOLOR: black;
+    --LINK-COLOR: black;
+    
+}
+body {
+    font-family: var(--FF);
+    color: var(--FCOLOR);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);       
+    min-height: 100vh;    
+    max-width: 1000px;
+    margin: 0 auto;    
+}
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+p {
+    padding: 0.5rem; 
+    font-size: 1.2rem;    
+}
+.gallery {  
+    display: flex;
+    padding: 0.5rem;  
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;    
+    flex-wrap: wrap;    
+}
+footer {
+    height: 3rem;
+    margin: 2rem auto;    
+}
+a:any-link {
+    color: var(--LINK-COLOR);
+}
+.header__title {
+    text-align: center;
+    text-shadow: 0 0 3px rgba(253, 253, 253, 0.671);
+}
+.header__paragraph {
+    text-align: justify;
+}
+.gallery__img {
+    padding-top: 2rem;
+}
+.gallery__image {
+    border: 1px solid rgb(24, 63, 16);
+    border-radius: 1rem;
+}
+.gallery__figcaption {
+    margin-top: 10px;  
+    padding: 10px 0;
+    font-size: 1.3rem;
+    text-align: center;       
+    border-top: none;
+}
+/* Animated image */
+.gallery__image-link img {
+    border: 1px solid #000;
+    transform: scale(1); /* Initial transformation state (normal size) */
+    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out, font-weight 0.2s ease-in-out; /* Add shadow and font-weight animations */
+}
+.gallery__image-link:hover img {
+    transform: scale(1.05); /* Enlarge the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+/* Animated link */
+.gallery__figcaption-link:link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+.gallery__figcaption-link:hover {
+    transform: scale(1.1); /* Enlarge by 10% */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow */
+    font-weight: bold; /* Bold font */
+}
+/* Animated link */
+.gallery__figcaption-repolink:link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+.gallery__figcaption-repolink:hover {
+    transform: scale(1.1); /* Enlarge by 10% */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow */
+    font-weight: bold; /* Bold font */
+}
+.gallery__figcaption-paragraph {
+    font-size: 1rem;
+    color: #ACC8E5;
+}
+.footer__paragraph {
+    display: flex;
+    font-size: 1.5rem;    
+    text-align: center;
+    justify-content: center;
+}
+.footer__giticon {
+    display: inline;    
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
