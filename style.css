@@ -40,16 +40,17 @@ p {
     font-size: 1.2rem;    
 }
 .gallery {  
-    display: flex;
+    display: flex;    
     padding: 0.5rem;  
     width: 100%;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: center;    
     flex-wrap: wrap;    
 }
 footer {
+    bottom: 0;
     height: 3rem;
-    margin: 2rem auto;    
+    margin: 2rem auto;       
 }
 a:any-link {
     color: var(--LINK-COLOR);
@@ -113,7 +114,7 @@ a:any-link {
 }
 .footer__paragraph {
     display: flex;
-    font-size: 1.5rem;    
+    font-size: 1.3rem;    
     text-align: center;
     justify-content: center;
 }
