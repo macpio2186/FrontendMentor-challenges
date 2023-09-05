@@ -34,14 +34,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - BEM
 
 
 ### What I learned
 
-This is my first "solo" project. I've learned how to add a project to GitHub, how to make a live website. As for the code itself, I've learned what CSS custom properties are, how to apply BEM, and HTML5 semantics.
+This is my first "solo" project. I've learned how to add a project to GitHub, how to make a live website. As for the code itself, I've learned how to apply BEM, and HTML5 semantics.
 
 
 
