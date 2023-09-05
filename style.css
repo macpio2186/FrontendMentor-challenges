@@ -22,6 +22,8 @@ img {
     
 }
 body {
+    display: flex; 
+    flex-direction: column;
     font-family: var(--FF);
     color: var(--FCOLOR);
     background-color: var(--BGCOLOR);
@@ -47,8 +49,10 @@ p {
     justify-content: center;    
     flex-wrap: wrap;    
 }
-footer {
-    bottom: 0;
+main {
+    flex: 1;
+}
+footer {    
     height: 3rem;
     margin: 2rem auto;       
 }
