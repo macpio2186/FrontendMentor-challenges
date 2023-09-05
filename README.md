@@ -6,7 +6,7 @@ All projects are available on: [My Frontend Mentor solution](https://macpio2186.
 
 ### List of the projects:
 
-| Project name | Repo | xxx |
+| Project name | Repo | Languages |
 | ------------ | ---- | --- |
-| 1. QR | GitHub repo | HTML/CSS |
+| 1. QR code component | [GitHub repo](https://github.com/macpio2186/FrontendMentor-challenges/tree/main/qr-code-component-main) | HTML/CSS |
 
