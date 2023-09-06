@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    footer { font-size: 11px; text-align: center; }
+    footer a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="card">
+   
+    <header class="header">
+      <picture class="header__figure">
+          <!-- Obraz dla szerokości ekranu mniejszej lub równej 768px -->
+          <source media="(max-width: 550px)" srcset="images/image-product-mobile.jpg">          
+          <img class="header__figure-image" src="images/image-product-desktop.jpg" alt="channel perfume bottle" title="Channel perfume bottle" width="660" height="900">
+      </picture>
+  </header>
+    <main class="main">    
+      <p class="main__type">Perfume</p>
+      <h2 class="main__header">Gabrielle Essence Eau De Parfum</h2>
+      <p class="main__paragraph">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the Hose of CHANEL.</p>
+      <p class="main__price">
+        <span class="main__discounted-price">$149.99</span>
+        <span class="main__original-price">$169.99</span>        
+      </p>
+      <button class="main-button"><img class="main__button-icon"src="images/icon-cart.svg" alt="" width="15" height="16"> Add to Cart</button>  
+    </main> 
+  </div>  
+  <footer class="footer">
+    <p class="footer__paragraph">Challenge by <a class="footer__link" href="https://www.frontendmentor.io/" target="_blank" title="Frontend Mentor main page">Frontend Mentor</a>. 
+      Coded by <a class="footer__link" href="https://github.com/macpio2186" title="my github">macpio</a>. Back to <a href="https://macpio2186.github.io/FrontendMentor-challenges/index.html" title="My solutions page">main</a></p>
+  </footer>
+  </body>
+</html>
