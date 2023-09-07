@@ -3,128 +3,136 @@
 /* font-family: 'Fraunces', serif;
 font-family: 'Montserrat', sans-serif; */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* root VARIABLES */ 
+/* variables from style-guide */
+:root { 
+  --fm-Fraunces: 'Fraunces', serif;
+  --fm-Montserrat: 'Montserrat', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --color-primary-cyan: hsl(158, 36%, 37%);
+  --color-primary-cyandark: hsl(158, 36%, 20%);
+  --color-primaty-cream: hsl(30, 38%, 92%);
+  --color-neutral-dakrblue: hsl(212, 21%, 14%);
+  --color-neutral-grayishblue: hsl(228, 12%, 48%);
+  --colol-neutral-white: hsl(0, 0%, 100%);
 }
-:root {
-    --BG:hsl(30, 38%, 92%);
-    --BGCOLOR: white;
-    --GREENCOLOR: hsl(158, 36%, 37%);
-    --HEADLINECOLOR: hsl(212, 21%, 14%);
-    --HOVERCOLOR: hsl(158, 36%, 23%);
-    --PARCOLOR: hsl(228, 12%, 48%);
+
+/* RESET by https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {    
+  box-sizing: border-box;
+   margin: 0;
+  padding: 0;
 }
-body {     
-    display: flex;
-    height: 100vh; 
-    margin: 0;
-    background-color: var(--BG);
-    justify-content: center;
-    align-items: center;      
+body {
+    -webkit-font-smoothing: antialiased;
 }
-.card {       
-    height: auto;
-    width: 330px;  
-    background-color: var(--BGCOLOR); 
-    border-radius: 10px;         
+img, picture, video, canvas, svg {
+  max-width: 100%; 
+  display: block;    
 }
-main {
-    padding: 10px 20px ;
+ input, button, textarea, select {
+  font: inherit;
 }
-h, p {
-    margin-top: 15px;
-    margin-bottom: 10px;
+  p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
 }
-h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 32px;   
-    line-height: 1;
-    color: var(--HEADLINECOLOR)
+
+/* GENERAL STYLING */
+
+body {  
+  height: 100vh;
+  margin: 1rem;
+  font-family: var(--fm-Montserrat);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--color-neutral-dakrblue);
+  background-color: var(--color-primaty-cream); 
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
 }
-p {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
-    color: var(--PARCOLOR)
+footer {
+  display: none;  
 }
-.header__figure-image {
-    height: auto;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
+
+/* UTILITES */
+.card__price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
-.main__type {
-    letter-spacing: 4px;
-    text-transform: uppercase;
+
+/* ELEMENTS */
+.card {
+  max-width: 343px;
+  background-color: var(--colol-neutral-white);
+  display: grid;
+  border-radius: 0.75rem;
+  overflow: hidden; 
+} 
+.card__content {
+  padding: 1.5rem;
+  gap: 1rem;
+  display: grid;  
 }
-.main__price {
-    display: flex;    
-    margin-top: 20px;
-    align-items: center;
+.card__type {
+  font-size: 0.75rem;
+  color: var(--color-neutral-grayishblue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
-.main__discounted-price {
-    margin-right: 15px;
-    font-family: 'Fraunces', serif;
-    font-size: 32px;
-    color: var(--GREENCOLOR)
+.card__title {  
+  font-family: var(--fm-Fraunces);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
 }
-.main__original-price {
-    text-decoration: line-through;
+.card__description {  
+  line-height: 1.7;
+  color: var(--color-neutral-grayishblue);  
 }
-button {
-    display: flex;
-    height: 48px;    
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;  
-    background-color:  var(--GREENCOLOR);
-    color: var(--BGCOLOR);
-    border: none;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
+.card__price-discounted {
+  color: var(--color-primary-cyan);
+  font-family: var(--fm-Fraunces);
+  font-size: 2rem;  
 }
-button:hover {
-    background-color: var(--HOVERCOLOR);
-    cursor: pointer;
+.card__price-original {
+  text-decoration: line-through;
 }
-.main__button-icon {
-    margin-right: 15px;
+.card__btn {  
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+  padding: 0.875rem;
+  font-weight: var(--fw-bold); 
+  color: var(--colol-neutral-white);
+  background-color: var(--color-primary-cyan);  
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;  
 }
-footer { 
-    display: none;   
-    margin-bottom: 20px;
-    text-align: center; 
+.card__btn:hover, .card__btn:focus {
+  background-color: var(--color-primary-cyandark);
+}
+
+@media (min-width: 550px) {
+  footer {
+    display: block;
     position: absolute;
+    margin-bottom: 0.5rem;
     bottom: 0;
-    left: 0;
-    right: 0; 
+  }
+  .card {    
+    display: flex;    
+    min-width: 550px;
+    max-width: 550px;
+  }
+  .card__content {
+    max-width: 50%;
+  }
 }
-
-@media screen and (min-width: 550px) {
-    .card {
-        display: flex;
-        width: 540px;
-        height: 420px;       
-    }
-    main {
-        width: 270px;
-    }
-    .header__figure-image {
-        height: 100%;        
-        border-radius: 10px 0 0 10px;
-    }
-    footer {    
-        display: inline;
-    }
-    .footer__paragraph {
-        font-size: 11px;
-    }
-}   
-
-
-
-
 
