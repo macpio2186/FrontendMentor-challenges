@@ -103,41 +103,29 @@ a:hover {
     display: grid;
     margin-right: 1rem;
 }
-.order__button-change {
-    background: none;
-    border: none;
-}
-.order__button-cancel {
-    font-size: 0.9rem;
-    font-weight: var(--fw-900);    
-    background: none;
-    border: none;
-    margin: 0.75rem 1.5rem;
-    padding: 0.75rem;
-}
 .order__button-payment {
     margin: 0 1.5rem;
     padding: 0.75rem;
     font-size: 0.9rem;
     font-weight: var(--fw-700);    
     background-color: var(--color-primary-brightblue);
+    color: var(--color-white);
     border: none;
     border-radius: 0.5rem;  
     box-shadow: 0px 20px 20px var(--color-primary-paleblue);  
 }
-.order__payment:link {  
-    text-decoration: none;
-    color: var(--color-white);
-}
 .order__button-payment:hover {
     cursor: pointer;
-    background-color: var(--color-neutral-lightblue)
+    background-color: var(--color-neutral-lightblue);
 }
 .order__change:hover {
     text-decoration: none;
     color: var(--color-neutral-lightblue);
 }
-.order__cancel:link {  
+.order__cancel {  
+    margin: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: var(--fw-900);
     text-decoration: none;
     color: var(--color-neutral-desaturatedblue);
 }
