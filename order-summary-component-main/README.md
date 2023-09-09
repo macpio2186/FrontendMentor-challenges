@@ -26,8 +26,6 @@ Users should be able to:
 
 ![solution desktop preview](https://github.com/macpio2186/FrontendMentor-challenges/blob/main/order-summary-component-main/screenshot/desktop.webp)
 
-![solution mobilr preview](https://github.com/macpio2186/FrontendMentor-challenges/blob/main/order-summary-component-main/screenshot/mobile.webp)
-
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/macpio2186/FrontendMentor-challenges/tree/main/order-summary-component-main)
