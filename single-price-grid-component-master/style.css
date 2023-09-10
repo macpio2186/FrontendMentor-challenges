@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
+
+/* root VARIABLES clr=color fw=font-weight ff=font-family */ 
+:root{
+    --ff-karla:'Karla', sans-serif;
+
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --clr-white: white;
+    --clr-black: black;
+    --clr-primary-cyan: hsl(179, 62%, 43%);
+    --clr-primary-lightCyan: hsl(179, 75%, 43%);
+    --clr-primary-brightYellow: hsl(71, 73%, 54%);
+    --clr-neutral-lightGray: hsl(204, 43%, 93%);
+    --clr-neutral-grayishBlue: hsl(218, 22%, 67%);  
+}
+/* RESET
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+margin: 0;
+padding: 0;
+}
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+input, button, textarea, select {
+font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+ 
+/* GENERAL STYLES */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-neutral-lightGray);
+}
+header, main, aside {
+    padding: 1.2rem;    
+}
+header {      
+    background-color: var(--clr-white);    
+}
+main {    
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-white);
+}
+aside {
+    background-color: var(--clr-primary-lightCyan);    
+    color: var(--clr-white);
+}
+footer {
+    display: none;
+}
+h2 {
+    font-size: 1rem;
+    font-weight: var(--fw-700); 
+}
+.container {
+    display: grid;      
+    width: 300px;     
+    font-family: var(--ff-karla);       
+    color: var(--clr-neutral-grayishBlue);  
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+}
+
+/* ELEMENTS*/ 
+.subCard__title {
+    font-size: 1.3rem;
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-cyan);
+}
+.subCard__info {
+    margin: 1.5rem 0; 
+    line-height: 1.1;
+    font-size: 1.1rem;
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-brightYellow);
+}
+.subCard__description {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    letter-spacing: 0.02rem;
+}
+.subSign__title {
+    letter-spacing: 0.07rem;
+}
+.subSign__price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+.subSign__quote {    
+    font-size: 1.75rem;
+    font-weight: var(--fw-700);
+}
+.subSign__lenght {
+    font-weight: var(--fw-200);
+    letter-spacing: 0.05rem;
+    opacity: 0.5;
+}
+.subSign__btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: var(--clr-primary-brightYellow);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 0.25rem;   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144); 
+}
+.subSign__btn:hover, .subSign__btn:active {
+    cursor: pointer;
+}
+.additionalInfo__list a:link {
+    font-weight: var(--fw-200);
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    color: var(--clr-white);
+}
+.additionalInfo__list a:visited {
+    color:var(--clr-white);
+}
+.additionalInfo__list {
+    margin-top: 1rem;
+    line-height: 1.1;
+    list-style-type: none;
+}
+footer a:any-link {
+    color: var(--clr-black);
+}
+@media (min-width: 590px) {
+    .container {        
+        width: 625px;       
+        grid-template-columns: 1fr 1fr;
+    }      
+    footer {
+        display: block;
+        position: absolute;
+        margin-bottom: 0.5rem;      
+        font-size: 0.6875rem;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: var(--clr-black);
+      }
+    header, main, aside {
+        padding: 2rem;
+    }
+    .card:first-child {        
+        grid-column: 1 / 3
+    }
+}
